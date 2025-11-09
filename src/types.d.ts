@@ -10,6 +10,8 @@ export interface Video {
   title: string;
   filename: string;
   originalName: string;
+  s3Key: string; // NEW
+  s3Url?: string; // NEW
   userId: string;
   status: "uploading" | "processing" | "completed" | "failed";
   sensitivity: "safe" | "flagged" | "pending";
