@@ -20,7 +20,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ video, onClose }) => {
       try {
         setLoading(true);
         const API_URL =
-          import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+          import.meta.env.VITE_API_URL || "https://mockerchat.hulkbase.com/api";
         const response = await axios.get(
           `${API_URL}/videos/stream/${video._id}?token=${user?.token}`
         );
